@@ -1,9 +1,9 @@
-function App() {
+import React from 'react'
+
+type Props = {}
+
+export default function App({}: Props) {
   return (
-    <div className="App">
-      <h1>Hello word</h1>
-    </div>
+    <h1>Hello word</h1>
   )
 }
-
-export default App

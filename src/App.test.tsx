@@ -1,10 +1,18 @@
-import * as React from "react";
-import {act} from 'react-dom/test-utils';
-import * as ReactDOM from "react-dom";
+/**
+ * @jest-environment jsdom
+ */
+import React from "react"
+import { render, screen } from '@testing-library/react'
+import { describe, expect, test } from '@jest/globals'
+import '@testing-library/jest-dom'
 import App from "./App";
 
+
 describe('App', function () {
-  test('should first', () => { 
-    console.log("hola mundo")
+  test('musth a heading with text hello word', () => { 
+    render(<App />)
+    const heading = screen.getByText(/hello word/i)
+
+    expect(heading).toBeDefined()
    })
 });
